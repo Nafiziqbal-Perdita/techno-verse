@@ -23,15 +23,15 @@ export default function Remote_access() {
     navigate(`/remote-access/_session_/${room.trim()}`);
   };
 
-  useEffect(() => {
-    const hasRefreshed = sessionStorage.getItem("hasRefreshed");
+  // useEffect(() => {
+  //   const hasRefreshed = sessionStorage.getItem("hasRefreshed");
 
-    if (hasRefreshed === "false") {
-      console.log("done");
-      sessionStorage.setItem("hasRefreshed", "true");
-      window.location.reload(); //trigger a refresh so that it should turn of the camera
-    }
-  }, []);
+  //   if (hasRefreshed === "false") {
+  //     console.log("done");
+  //     sessionStorage.setItem("hasRefreshed", "true");
+  //     window.location.reload(); //trigger a refresh so that it should turn of the camera
+  //   }
+  // }, []);
 
 
 
