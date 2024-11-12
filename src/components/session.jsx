@@ -291,7 +291,8 @@ const Session = () => {
     if (socketRef.current) {
       socketRef.current.disconnect();
     }
-    navigate("/remote-access");
+    // navigate("/remote-access");
+    navigate("/");
   };
 
   const copyToClipBoard = async (e) => {
