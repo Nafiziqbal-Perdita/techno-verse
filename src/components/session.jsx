@@ -70,9 +70,9 @@ const Session = () => {
             // Get the video track settings (e.g., width and height of the remote shared screen)
             const videoTrack = remoteStream.getVideoTracks()[0];
             const settings = videoTrack.getSettings();
-            console.log(
-              `Remote video width: ${settings.width}, height: ${settings.height}`
-            );
+            // console.log(
+            //   `Remote video width: ${settings.width}, height: ${settings.height}`
+            // );
             const remoteWidth = settings.width || 1280; // Default width if not provided
             const remoteHeight = settings.height || 720; // Default height if not provided
 
@@ -150,7 +150,7 @@ const Session = () => {
 
     peerRef.current.on("open", (id) => {
       myPeerId.current = id;
-      console.log("My peer id is", myPeerId.current);
+      // console.log("My peer id is", myPeerId.current);
       const SOCKET_URL = import.meta.env.VITE_SOCKET_URL;
       // console.log("Socket url",SOCKET_URL); // Should print the correct URL
 
@@ -161,7 +161,7 @@ const Session = () => {
       // setSocketState(socketRef.current);
 
       socketRef.current.on("connect", () => {
-        console.log("Socket connected with ID: ", socketRef.current.id);
+        // console.log("Socket connected with ID: ", socketRef.current.id);
       });
 
       socketRef.current.emit("join room", room_id);
@@ -217,9 +217,9 @@ const Session = () => {
               // Get the video track settings (e.g., width and height of the remote shared screen)
               const videoTrack = remoteStream.getVideoTracks()[0];
               const settings = videoTrack.getSettings();
-              console.log(
-                `Remote video width: ${settings.width}, height: ${settings.height}`
-              );
+              // console.log(
+              //   `Remote video width: ${settings.width}, height: ${settings.height}`
+              // );
               const remoteWidth = settings.width || 1280; // Default width if not provided
               const remoteHeight = settings.height || 720; // Default height if not provided
 
@@ -253,8 +253,8 @@ const Session = () => {
       to: remoteUserSocketId.current
     };
       // Log the pressed key
-      console.log(`Key pressed: ${keyEvent.code}`);
-      console.log(`Key pressed: ${keyEvent}`);
+      // console.log(`Key pressed: ${keyEvent.code}`);
+      // console.log(`Key pressed: ${keyEvent}`);
 
 
       socketRef.current.emit('keyPress',keyEvent);
@@ -329,7 +329,7 @@ const Session = () => {
   const handleMouseClick = useCallback((e) => {
     e.preventDefault();
 
-    console.log("click", e.button);
+    // console.log("click", e.button);
 
     const data = {
       button: e.button,
@@ -348,7 +348,8 @@ const Session = () => {
         deltaY: event.deltaY,
         to: remoteUserSocketId.current,
       };
-      console.log("Scroll detected", scrollData);
+      // console.log("Scroll detected", scrollData);
+
   
       // Emit scroll data via socket
       socketRef.current.emit("mouseScroll", scrollData);
