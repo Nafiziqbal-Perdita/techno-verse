@@ -2,6 +2,7 @@
 <p align="center">
   <img src="./src/assets/logo.svg" alt="Project Logo" width="200"/>
 </p>
+
 *We facilitate meeting between Client and Technicians*
 ## Live Link
 [Techno-Verse](https://techno-verse.onrender.com/)
