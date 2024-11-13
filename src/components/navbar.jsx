@@ -316,7 +316,7 @@ export function NavbarMain() {
             to="#"
             onClick={() => {
               window.open(
-                "https://northsouth0-my.sharepoint.com/:u:/g/personal/nafiz_iqbal_northsouth_edu/EXdgXJxdM4FEgKeUqsP-G0sBmEvABHcjMAlqbf-BG7_ipQ?e=71Ek82"
+                "https://northsouth0-my.sharepoint.com/:u:/g/personal/nafiz_iqbal_northsouth_edu/ESyxaJvqbXVLp5wiBxFY1yEBdFPm755DUYFfzvKvt1xaTA?e=DC89zM"
               );
             }}
           >
