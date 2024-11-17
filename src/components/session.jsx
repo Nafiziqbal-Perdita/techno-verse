@@ -141,10 +141,38 @@ const Session = () => {
 
   useEffect(() => {
     // peerRef.current = new Peer();
+ // Hardcoded ICE server configuration
+ const iceServers = [
+  { urls: "stun:stun.relay.metered.ca:80" },
+  {
+    urls: "turn:global.relay.metered.ca:80",
+    username: "e96b95d63751341b825ac12d",
+    credential: "4s5QxC4Pa+CRq67V",
+  },
+  {
+    urls: "turn:global.relay.metered.ca:80?transport=tcp",
+    username: "e96b95d63751341b825ac12d",
+    credential: "4s5QxC4Pa+CRq67V",
+  },
+  {
+    urls: "turn:global.relay.metered.ca:443",
+    username: "e96b95d63751341b825ac12d",
+    credential: "4s5QxC4Pa+CRq67V",
+  },
+  {
+    urls: "turns:global.relay.metered.ca:443?transport=tcp",
+    username: "e96b95d63751341b825ac12d",
+    credential: "4s5QxC4Pa+CRq67V",
+  },
+];
+
+
+
+
 
     peerRef.current = new Peer({
       config: {
-        iceServers: [{ url: "stun:stun.l.google.com:19302" }],
+        iceServers: iceServers ,
       } /* Sample servers, please use appropriate ones */,
     });
 
