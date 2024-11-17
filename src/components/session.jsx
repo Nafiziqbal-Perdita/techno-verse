@@ -466,7 +466,7 @@ const Session = () => {
 
             <div className=" text-white  flex items-center justify-evenly gap-2 ">
               <div>
-                <span>Room Code: </span>
+                <span className="hidden sm:inline " >Code: </span>
                 <span className="bg-slate-800 px-2 py-1 rounded-md shadow-md">
                   {room_id}
                 </span>
