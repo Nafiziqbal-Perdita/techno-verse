@@ -5,7 +5,9 @@ import Stripe from "stripe";
 
 dotenv.config();
 
-const stripe = new Stripe(process.env.VITE_STRIPE_SECRET_KEY);
+console.log('Loaded STRIPE_SECRET_KEY:', process.env.STRIPE_SECRET_KEY ? 'Yes' : 'No');
+
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 const app = express();
 const PORT = 4242;

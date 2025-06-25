@@ -80,12 +80,10 @@ const Feedback = () => {
           <div className="w-full">
             <div
               id="feedback-disqus"
-              className="overflow-y-scroll h-[30rem] bg-gray-50 p-4 rounded-md border-4 border-double border-gray-200 mb-4"
+              className="overflow-y-scroll h-[30rem] glass bg-white/10 p-4 rounded-md border border-blue-400 mb-4"
             >
-              <h4 className="text-xl text-blue-gray-800 pb-2 font-semibold text-center">
-                TechSolutions has helped you{" "}
-                <span className="text-brown-700">Find work/Get work done</span>{" "}
-                Efficiently.
+              <h4 className="text-xl text-white pb-2 font-semibold text-center">
+                TechSolutions has helped you <span className="text-blue-300">Find work/Get work done</span> Efficiently.
               </h4>
               <DiscussionEmbed
                 shortname={disqusShortname}

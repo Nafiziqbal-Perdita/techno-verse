@@ -38,88 +38,59 @@ const Register = () => {
   };
 
   return (
-    <>
-      <main className="w-full h-screen flex self-center place-content-center place-items-center pt-[5rem] pb-[2rem] bg-brown-50">
-        <div className="w-96 text-gray-600 space-y-5 p-4 px-10 shadow-xl rounded-xl bg-white border-4 border-double border-brown-100">
-          <h1 className="text-3xl pt-5 font-bold">Create an Account</h1>
-          <form onSubmit={onSubmit} className="space-y-4">
-            <div>
-              <input
-                type="email"
-                placeholder="Email"
-                autoComplete="email"
-                required
-                value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                }}
-                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:indigo-600 shadow-sm rounded-lg transition duration-300"
-              />
-            </div>
-
-            <div>
-              <input
-                disabled={isRegistering}
-                type="password"
-                placeholder="Password"
-                autoComplete="new-password"
-                required
-                value={password}
-                onChange={(e) => {
-                  setPassword(e.target.value);
-                }}
-                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg transition duration-300"
-              />
-            </div>
-
-            <div>
-              <input
-                disabled={isRegistering}
-                type="password"
-                placeholder="Confirm Password"
-                autoComplete="off"
-                required
-                value={confirmPassword}
-                onChange={(e) => {
-                  setConfirmPassword(e.target.value);
-                }}
-                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg transition duration-300"
-              />
-            </div>
-
-            <span className="text-red-400 text-sm text-center flex justify-center">
-              {errorMessage}
-            </span>
-
-            <span className="text-green-500 text-sm text-center flex justify-center">
-              {successMessage}
-            </span>
-
-            <button
-              type="submit"
-              disabled={isRegistering}
-              className={`w-full px-4 py-2 text-white font-medium rounded-lg ${
-                isRegistering
-                  ? "bg-gray-300 cursor-not-allowed"
-                  : "bg-brown-600 hover:bg-brown-900 hover:shadow-xl transition duration-300"
-              }`}
-            >
-              {isRegistering ? "Signing Up..." : "Sign Up"}
-            </button>
-
-            <div className="text-sm text-center">
-              Already have an account? {"   "}
-              <Link
-                to={"/login"}
-                className="text-center text-sm hover:underline font-bold"
-              >
-                Continue
-              </Link>
-            </div>
-          </form>
+    <div className="w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 to-indigo-900">
+      <div className="w-full max-w-md glass shadow-2xl rounded-2xl p-8 border border-blue-400">
+        <h1 className="text-4xl font-extrabold text-white mb-6 text-center">Create Account</h1>
+        <form onSubmit={onSubmit} className="space-y-5">
+          <div>
+            <input
+              type="email"
+              placeholder="Email"
+              autoComplete="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full px-4 py-3 rounded-lg bg-white/10 text-white placeholder:text-blue-200 border border-blue-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-400 outline-none transition"
+            />
+          </div>
+          <div>
+            <input
+              type="password"
+              placeholder="Password"
+              autoComplete="new-password"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="w-full px-4 py-3 rounded-lg bg-white/10 text-white placeholder:text-blue-200 border border-blue-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-400 outline-none transition"
+            />
+          </div>
+          <div>
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              autoComplete="new-password"
+              required
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              className="w-full px-4 py-3 rounded-lg bg-white/10 text-white placeholder:text-blue-200 border border-blue-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-400 outline-none transition"
+            />
+          </div>
+          <span className="text-red-400 text-sm text-center flex justify-center">{errorMessage}</span>
+          <span className="text-green-400 text-sm text-center flex justify-center">{successMessage}</span>
+          <button
+            type="submit"
+            className="w-full py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-bold shadow-lg transition-all duration-200"
+            disabled={isRegistering}
+          >
+            {isRegistering ? "Registering..." : "Register"}
+          </button>
+        </form>
+        <div className="mt-6 text-center">
+          <span className="text-blue-200">Already have an account?</span>
+          <Link to="/login" className="text-blue-400 hover:underline ml-2">Login</Link>
         </div>
-      </main>
-    </>
+      </div>
+    </div>
   );
 };
 

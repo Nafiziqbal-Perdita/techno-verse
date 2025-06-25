@@ -39,33 +39,25 @@ const socials = [
 
 const Footer = () => {
   return (
-    <div className="bg-gradient-to-tr from-gray-900 to-brown-900 border-t-4 border-brown-200 border-double py-2 px-4">
-      <div className="grid grid-cols-1 items-center justify-center">
-        <ul className="flex gap-3 p-1 w-full  justify-center mx-auto bg-black opacity-40 rounded-xl border-2 ">
-          {socials.map((item) => (
-            <a
-              key={item.id}
-              href={item.url}
-              target="_blank"
-              rel="noopener noreferrer" // Added rel attribute for security
-              className="flex items-center justify-center w-10 h-10 bg-n-7 rounded-md transition-colors hover:bg-brown-200"
-            >
-              <img src={item.iconUrl} width={16} height={16} alt={item.title} />
-            </a>
-          ))}
-        </ul>
-
-        <p className="text-gray-400 text-center mt-2  opacity-75">
-          <a href="#" className="hover:underline px-1">
-            © {new Date().getFullYear()}. All rights reserved
+    <footer className="glass mt-12 py-8 px-4 flex flex-col items-center bg-gradient-to-t from-gray-900 to-blue-900">
+      <div className="flex gap-6 mb-4">
+        {socials.map((social) => (
+          <a
+            key={social.id}
+            href={social.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-110 transition-transform"
+          >
+            <img src={social.iconUrl} alt={social.title} className="w-7 h-7 text-white" />
           </a>
-          {" | "}
-          <a href="#" className="hover:underline px-1">
-            Changelog
-          </a>
-        </p>
+        ))}
       </div>
-    </div>
+      <p className="text-white text-sm text-center">
+        &copy; {new Date().getFullYear()} TechnoVerse. All rights reserved.
+      </p>
+    </footer>
   );
 };
+
 export default Footer;

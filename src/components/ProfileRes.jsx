@@ -190,34 +190,30 @@ const ProfileRes = () => {
             </button>
           </div>
         </div>
-        <div className="bg-brown-400 rounded-r-full border-brown-50 border-2 shadow-sm shadow-brown-500 mt-4">
+        <div className="bg-gradient-to-br from-blue-900 to-indigo-900 rounded-r-full border-brown-50 border-2 shadow-sm shadow-brown-500 mt-4">
           <h1 className="text-3xl font-bold text-white p-1 ml-2">PROFILE</h1>
         </div>
         {userData ? (
-          <div className="m-2">
-            <h2 className="text-xl font-bold mb-2">Account Information</h2>
-            <p className="text-md bg-gray-100 font-semibold">Email:</p>
-            <p className="text-md mb-1 break-words">{userData.email}</p>
-            <p className="text-md bg-gray-100 font-semibold">Role:</p>
-            <p className="text-md mb-1">{userData.role}</p>
-            <p className="text-md bg-gray-100 font-semibold">Verification:</p>
-            <p className="text-md mb-1">{userData.verification}</p>
-            {/* <p className="text-md bg-gray-100 font-semibold">
-              Subscription Status:
-            </p>
-            <p className="text-md mb-1">{userData.subscription_status}</p> */}
-            <p className="text-md bg-gray-100 font-semibold">User is:</p>
-            <p className="text-md mb-1">{userData.login_status}</p>
-            <hr className="clearfix w-100" />
+          <div className="m-2 glass shadow-xl rounded-2xl p-8 border border-blue-400">
+            <h2 className="text-xl font-bold mb-2 text-white">Account Information</h2>
+            <p className="text-md bg-white/10 font-semibold text-white">Email:</p>
+            <p className="text-md mb-1 break-words text-white">{userData.email}</p>
+            <p className="text-md bg-white/10 font-semibold text-white">Role:</p>
+            <p className="text-md mb-1 text-white">{userData.role}</p>
+            <p className="text-md bg-white/10 font-semibold text-white">Verification:</p>
+            <p className="text-md mb-1 text-white">{userData.verification}</p>
+            <p className="text-md bg-white/10 font-semibold text-white">User is:</p>
+            <p className="text-md mb-1 text-white">{userData.login_status}</p>
+            <hr className="clearfix w-100 border-blue-400" />
             <br />
             <div className="grid items-center justify-start mb-2">
               <img
-                className="shadow-md shadow-brown-100 border-4 border-double border-gray-600 rounded-md object-cover mb-4 lg:mb-0 lg:mr-4 lg:h-64 md:h-40 sm:h-32 xs:h-24"
+                className="shadow-md shadow-brown-100 border-4 border-double border-blue-400 rounded-md object-cover mb-4 lg:mb-0 lg:mr-4 lg:h-64 md:h-40 sm:h-32 xs:h-24"
                 src={userData.profilePicture || "/default-profile-picture.png"}
                 alt="Profile Picture"
               />
             </div>
-            <hr className="clearfix w-100" />
+            <hr className="clearfix w-100 border-blue-400" />
           </div>
         ) : (
           <p className="text-red-500">{error}</p>

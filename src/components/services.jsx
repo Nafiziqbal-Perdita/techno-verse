@@ -7,21 +7,27 @@ const Services = () => {
       <Advertise />
       <section
         id="Services"
-        className="mx-auto px-4 space-y-6 bg-gradient-to-b from-brown-50 to-gray-50 py-[6rem]"
+        className="mx-auto px-4 space-y-6 bg-gradient-to-b from-blue-900 to-indigo-900 py-[6rem]"
       >
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-          <h2 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl underline decoration-8 decoration-blue-300">
+          <h2
+            className="font-extrabold text-5xl md:text-6xl leading-[1.1] underline decoration-8 decoration-blue-400 mb-2"
+            style={{ color: "#fff" }}
+          >
             Services
           </h2>
-          <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+          <p
+            className="max-w-[85%] leading-normal sm:text-lg sm:leading-7"
+            style={{ color: "#fff" }}
+          >
             We aim to provide secure and dependable services for your needs.
           </p>
         </div>
-        <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
+        <div className="mx-auto grid justify-center gap-6 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
           {ServicesData.map((feature, index) => (
             <div
               key={index}
-              className="relative overflow-hidden rounded-lg shadow-md hover:border-brown-300 hover:scale-105 bg-gradient-to-t from-brown-50 to-white border-4 border-brown-100 border-double select-none p-2 "
+              className="relative overflow-hidden rounded-lg glass shadow-md hover:border-blue-400 hover:scale-105 bg-white/10 border border-blue-400 select-none p-2 transition-all duration-200"
             >
               <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
                 <img
@@ -30,8 +36,16 @@ const Services = () => {
                   className="h-12 w-12"
                 />
                 <div className="space-y-2">
-                  <h3 className="font-bold">{feature.title}</h3>
-                  <p className="text-sm text-muted-foreground">
+                  <h3
+                    className="font-bold"
+                    style={{ color: "#fff" }}
+                  >
+                    {feature.title}
+                  </h3>
+                  <p
+                    className="text-sm"
+                    style={{ color: "#fff" }}
+                  >
                     {feature.description}
                   </p>
                 </div>

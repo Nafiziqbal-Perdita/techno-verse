@@ -92,23 +92,33 @@ function Chat() {
   );
 
   return (
-    <div className="mx-auto py-[6rem] px-2 md:px-4 min-h-screen  flex flex-wrap justify-center items-center bg-brown-50">
-      <div className="mb-3 ">
+    <div
+      className="mx-auto py-[6rem] px-2 md:px-4 min-h-screen flex flex-wrap justify-center items-center bg-brown-50"
+      style={{ color: "var(--color-text)" }}
+    >
+      <div className="mb-3">
         <input
           type="email"
           placeholder="Search user by email"
           value={searchEmail}
           onChange={(e) => setSearchEmail(e.target.value)}
           className="p-2 border border-gray-400 rounded mr-2"
+          style={{ color: "var(--color-text)" }}
         />
         <button
           onClick={() => findUserByEmail(searchEmail)}
           className="px-4 py-2 bg-brown-500 text-white rounded hover:bg-brown-600"
+          style={{ color: "var(--color-text)" }}
         >
           Start Chat
         </button>
         {searchStatus && (
-          <p className="mt-2 text-sm text-gray-600">{searchStatus}</p>
+          <p
+            className="mt-2 text-sm"
+            style={{ color: "var(--color-text)" }}
+          >
+            {searchStatus}
+          </p>
         )}
       </div>
 

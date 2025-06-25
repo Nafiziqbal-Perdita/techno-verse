@@ -196,16 +196,16 @@ const TicketForm = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-brown-50 pt-[8rem]">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-blue-900 to-indigo-900 pt-[8rem]">
       {isLoggedIn ? (
         <div className="w-full ">
-          <div className="mx-auto p-4 max-w-md bg-white rounded-lg shadow-md">
+          <div className="mx-auto p-4 max-w-md glass shadow-xl rounded-2xl bg-white/10 border border-blue-400">
             <form className="space-y-4">
               <input
                 type="text"
                 value={username}
                 disabled
-                className="w-full p-2 border rounded"
+                className="w-full p-2 border rounded bg-white/10 text-white placeholder:text-blue-200 border-blue-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-400 outline-none transition"
               />
               <input
                 type="text"
@@ -213,14 +213,14 @@ const TicketForm = () => {
                 onChange={(e) => setIssue(e.target.value)}
                 placeholder="Issue"
                 required
-                className="w-full p-2 border rounded"
+                className="w-full p-2 border rounded bg-white/10 text-white placeholder:text-blue-200 border-blue-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-400 outline-none transition"
               />
               <input
                 type="text"
                 value={operatingsys}
                 onChange={(e) => setOperatingsys(e.target.value)}
                 placeholder="Operating System"
-                className="w-full p-2 border rounded"
+                className="w-full p-2 border rounded bg-white/10 text-white placeholder:text-blue-200 border-blue-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-400 outline-none transition"
                 required
               />
               <textarea
@@ -228,21 +228,21 @@ const TicketForm = () => {
                 onChange={(e) => setDescription(e.target.value)}
                 placeholder="Description"
                 required
-                className="w-full p-2 border rounded"
+                className="w-full p-2 border rounded bg-white/10 text-white placeholder:text-blue-200 border-blue-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-400 outline-none transition"
               ></textarea>
               <input
                 type="number"
                 value={budget}
                 onChange={(e) => setBudget(e.target.value)}
                 placeholder="Budget in USD"
-                className="w-full p-2 border rounded"
+                className="w-full p-2 border rounded bg-white/10 text-white placeholder:text-blue-200 border-blue-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-400 outline-none transition"
               />
               <input
                 type="number"
                 value={timezone}
                 onChange={(e) => setTimezone(e.target.value)}
                 placeholder="EST Timezone"
-                className="w-full p-2 border rounded"
+                className="w-full p-2 border rounded bg-white/10 text-white placeholder:text-blue-200 border-blue-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-400 outline-none transition"
                 required
               />
               <button
